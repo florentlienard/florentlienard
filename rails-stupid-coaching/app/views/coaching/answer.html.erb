@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="answers">
+    <blockquote class="blockquote">
+      <p class="mb-0"><%= @question %></p>
+      <footer class="blockquote-footer"><cite title="Source Title">You</cite></footer>
+    </blockquote>
+    <% if @question.include?("?") %>
+    <p>Silly question, get dressed and go to work!</p>
+    <% elsif @question == 'I am going to work right now!' %>
+    <p>...</p>
+    <% else %>
+    <blockquote class="blockquote">
+      <p class="mb-0">I don't care, get dressed and go to work!</p>
+      <footer class="blockquote-footer"><cite title="Source Title">Your coach</cite></footer>
+    </blockquote>
+    <% end %>
+  </div>
+  <div class="answers">
+    <%= link_to "Ask a new question", ask_path %>
+  </div>
+</div>
+
